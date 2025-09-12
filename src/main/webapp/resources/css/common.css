@@ -1,0 +1,4 @@
+@charset "UTF-8";
+body{font-family: 'GMarketSans';}
+header{position:absolute; padding:50px;}
+.formBox{width:100%; height:100vh; background:#F9FAFC;}
