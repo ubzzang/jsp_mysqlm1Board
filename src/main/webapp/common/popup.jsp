@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="../resources/css/reset.css" rel="stylesheet">
-<link href="../resources/css/common.css" rel="stylesheet">
+<title>Insert title here</title>
 </head>
 <body>
-	<header>
-	</header>
+
+</body>
+</html>
