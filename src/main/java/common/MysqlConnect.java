@@ -13,9 +13,9 @@ public class MysqlConnect {
 	public ResultSet rs;
 	
 	public MysqlConnect() {
-		String url="jdbc:mysql://localhost:3306:jspdb";
-		String id="lyb";
-		String pw="1234";
+		String url="jdbc:mysql://localhost:3306/jspdb";
+		String id="root";
+		String pw="dbqls940927";
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

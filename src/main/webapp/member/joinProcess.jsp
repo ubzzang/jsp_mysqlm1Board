@@ -1,3 +1,4 @@
+<%@page import="utils.JSFunction"%>
 <%@page import="dao.MemberDAO"%>
 <%@page import="dto.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -11,8 +12,8 @@ MemberDAO dao=new MemberDAO();
 int result=dao.insertMamber(member);
 
 if(result==1){
-	response.sendRedirect("login.jsp");
+	JSFunction.alertLocation("회원가입에 성공했습니다.", "login.jsp", out); 
 }else{
-	request.getRequestDispatcher("JoinForm.jsp").forward(request, response);
+	JSFunction.alertBack("회원가입에 실패했습니다.", out);  
 }
 %>

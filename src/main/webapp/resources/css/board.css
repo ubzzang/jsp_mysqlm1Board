@@ -1,1 +1,24 @@
 @charset "UTF-8";
+.boardForm > div{display:flex; align-items:center; padding:20px; border-bottom:1px solid #ddd;}
+.boardForm > div > span{width:100px;}
+.boardForm > div > input,
+.boardForm > div > div
+{width:calc(100% - 100px); border:none; outline:none; padding:20px;}
+.boardForm > div textarea{padding:20px; width:100%; height:300px; border:none; outline:none;}
+.boardForm .btnBox{display:flex; gap:10px; justify-content: end; margin-top:30px; padding:0; border-bottom:none;}
+.boardForm .btnBox input[type="submit"],
+.boardForm .btnBox button
+{padding:10px; border:1px solid #000;  background:none; width:auto; }
+.boardForm .btnBox input[value]{font-family: 'GMarketSans'; font-size:16px; }
+.boardForm .btnBox button{font-family: 'GMarketSans'; font-size:16px;}
+.boardForm .btnBox button.type01{color:#253a82; border:1px solid #253a82; }
+.boardForm .btnBox button.type02{color:red; border:1px solid red;}
+
+.boardForm.type02{background:#fff; border-top:1px solid #000; display:flex; flex-wrap:wrap; padding:0 30px 30px 30px;}
+.boardForm.type02 > div{flex:1 1 auto; border-right:1px solid #ddd;}
+.boardForm.type02 .w100{flex:auto; width:100%; border-right:none;}
+.table tr{border-bottom:1px solid #ccc;}
+.table th, .table td{padding:20px;}
+.table thead tr{background:#253a82; color:#fff;}
+
+.boardForm input[readonly]{background:#f1f1f1;}
