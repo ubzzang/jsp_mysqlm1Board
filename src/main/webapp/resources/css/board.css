@@ -15,10 +15,16 @@
 .boardForm .btnBox button.type02{color:red; border:1px solid red;}
 
 .boardForm.type02{background:#fff; border-top:1px solid #000; display:flex; flex-wrap:wrap; padding:0 30px 30px 30px;}
-.boardForm.type02 > div{flex:1 1 auto; border-right:1px solid #ddd;}
+.boardForm.type02 > div{flex:1 1 auto;}
 .boardForm.type02 .w100{flex:auto; width:100%; border-right:none;}
 .table tr{border-bottom:1px solid #ccc;}
 .table th, .table td{padding:20px;}
 .table thead tr{background:#253a82; color:#fff;}
 
 .boardForm input[readonly]{background:#f1f1f1;}
+
+.searchBox select{line-height:40px; border:1px solid #ddd; background:#fff; border-radius:4px;}
+.searchBox form{display:flex; gap:4px;}
+.searchBox .area{position:relative;}
+.searchBox input[type="text"]{line-height:40px; padding:0 20px; border:1px solid #ddd; border-radius:4px;}
+.searchBox button{background:url(../img/search.png) no-repeat center; width:40px; height:40px; position:absolute; top:0; right:4px; border:none; outline:none;}

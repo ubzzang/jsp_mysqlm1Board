@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import common.MysqlConnect;
 import dto.Board;
@@ -68,10 +69,18 @@ public class BoardDAO extends MysqlConnect{
 	}
 	
 	// 글 목록
-	 public ArrayList<Board> boardList(){
+	 public ArrayList<Board> boardList(Map<String, Object> map){
 		 ArrayList<Board> list=new ArrayList<>();
-		 String sql="select * from board order by num desc";
-		 
+		 String sql="select * from board";
+		 if(map.get("searchWord") !=null) {
+			 sql+=" where "+map.get("searchField")+" "
+					 +" Like '%"+map.get("searchWord")+ "%'";
+		 }
+		 	 sql+=" order by num desc";
+		 	 
+			/*
+			 * select * from board where title like '%abc%' order by num;
+			 */
 		 try {
 			 ps=con.prepareStatement(sql);
 			 rs=ps.executeQuery();
@@ -91,7 +100,7 @@ public class BoardDAO extends MysqlConnect{
 			 ex.printStackTrace();
 		 }
 		 return list;
-	 }
+	 } 
 	 
 	 //글 수정하기
 	 public int updateBoard(Board board) {
